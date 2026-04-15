@@ -1,8 +1,26 @@
-body { color : white ; background-color : rgb(66, 66, 159);}
-h1 { background-color : black; }
-h2 {padding-top: 20px; }
-h3 {padding-top: 20px; padding-bottom: 0; margin-bottom:0; }
-p {padding: 6px; margin:6px; }
-a {margin-top: 140px; margin-bottom: 140px;}
-.link {color : yellow; border:yellow solid; border-radius:2px; box-shadow:12px green;}
-.link:hover {color : red; border:red solid; border-radius:2px; box-shadow:12px green;}
+h1 {
+   text-align: center;
+   padding: 50px;
+   height: 100px;
+   background-color: #375D8F;
+   font-size: 40px;
+}
+
+img {
+  float: left;
+  margin-right: 15px; 
+}
+
+
+img, #RightOfImage {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.About {
+  font-size: 200%;
+}
+
+.FirstDescription {
+  font-size: 120%;
+}
