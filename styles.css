@@ -6,21 +6,41 @@ h1 {
    font-size: 40px;
 }
 
-img {
-  float: left;
-  margin-right: 15px; 
+
+.columns {
+  flex: 1; 
+  padding: 10px;
 }
 
-
-img, #RightOfImage {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.About {
+.about {
   font-size: 200%;
 }
 
-.FirstDescription {
+.firstdescription {
   font-size: 120%;
+  text-align: top;
 }
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+td {
+    vertical-align: top;
+    padding: 40px;
+}
+
+th {
+  font-size: 180%;
+  padding: 40px;
+}
+
+.tableborder {
+  border-collapse: collapse;
+  border: 2px solid black; 
+}
+
+
