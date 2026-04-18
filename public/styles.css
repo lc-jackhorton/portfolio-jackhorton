@@ -6,6 +6,21 @@ h1 {
    font-size: 40px;
 }
 
+.background {
+   position: fixed;
+   top: 0;
+   height: 100vh;
+   width: auto;
+   z-index: -1;
+}
+
+.left_background {
+   left: 0;
+}
+
+.right_background {
+   right: 0;
+}
 
 .columns {
   flex: 1; 
