@@ -1,9 +1,10 @@
+/*-------------------*/
 /* Overall Structure */
+/*-------------------*/
 
 .page_structure {
   display: grid;
-  grid-template-columns: 1fr minmax(700px, 1000px) 1fr;
-  min-height: 100vh;
+  grid-template-columns: 1fr min(1000px, 100%) 1fr;
 }
 
 .left_background, .right_background {
@@ -15,44 +16,71 @@
 
 .middle_body {
   padding: 20px;
-  background: white; 
+  background-color: white; 
 }
 
 body {
   margin: 0;
 }
 
-/* Middle Body Structure */
-h1 {
-   text-align: center;
-   padding: 50px;
-   height: 100px;
-   background-color: #375D8F;
-   color:#D9E8F5;
-   font-size: 40px;
+/*------------*/
+/* Page Title */
+/*------------*/
+
+.title {
+  background-color: #375D8F;
+  padding: 35px 0;
 }
+
+h1 {
+  text-align: center;
+  color: #D9E8F5;
+  font-size: 40px;
+}
+
+/*------------------------*/
+/* Right Below Page Title */
+/*------------------------*/
+
+.first_tablelike {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  column-gap: 60px;
+}
+
+.firstimage {
+  display: flex;         /*Create a container*/
+  justify-content: flex-end;   /*Push image right of container*/
+}
+
+.firstimage img {
+  width: 250px;
+  height: auto;
+}
+
+.about {
+  text-align: left;
+}
+
+.firstdescription { 
+  font-size: 120%; 
+  text-align: left;
+}
+
+/*-------------------*/
+/* Upper Middle Body */
+/*-------------------*/
 
 .bold {
   font-weight: bold;
 }
 
-.about {
-  font-size: 200%;
-}
-
-.firstdescription {
-  font-size: 120%;
-  text-align: top;
-  text-align: left;
-}
-
-.firstimage {
-  float: right;
-}
-
 table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: fixed;   /*Forces table to be evenly spaced*/
 }
 
 td {
@@ -76,4 +104,31 @@ th {
 
 h3 {
   text-align: center;
+}
+
+/*-------------------*/
+/* Lower Middle Body */
+/*-------------------*/
+.tableliketwo {
+  display: flex;
+  flex-wrap: wrap;    
+  gap: 20px;
+  justify-content: center;
+}
+
+#projects_title {
+  font-size: 200%;
+}
+
+.project {
+  flex-grow: 1;   /*If extra space in row, expand items*/
+  flex-shrink: 1;   /*If  space in row tight, contract items*/
+  flex-basis: 300px;   /*Starting size*/
+  max-width: 350px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
 }
