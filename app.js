@@ -51,6 +51,14 @@ const server = http.createServer((req, res) => {
             res.end();
         })
     }
+    else if (req.url === "/IMG_Installer.png") {
+        filepath = path.join(__dirname, "public", "IMG_Installer.png");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "image/png"});
+            res.write(data);
+            res.end();
+        })
+    }
         else {
         res.writeHead(404);
         res.end("Not found");
