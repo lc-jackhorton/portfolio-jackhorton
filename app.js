@@ -99,12 +99,38 @@ const server = http.createServer((req, res) => {
             res.end();
         })
     }
-        else {
+    else if (req.url === "/message" && req.method === "POST") {
+        let dataoutput = "";
+
+        req.on("data", chunk => {
+            dataoutput += chunk.toString();
+        });
+
+        req.on("end", () => {
+            let params = new URLSearchParams(dataoutput);
+
+            let name = params.get("name");
+            let email = params.get("email");
+            let message = params.get("message");
+
+            console.log("-----------");
+            console.log("New message");
+            console.log("-----------");
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Message:", message);
+
+            res.writeHead(200, { "Content-Type": "text/plain" });
+            res.end("Message received");
+        });
+    }
+    else {
         res.writeHead(404);
         res.end("Not found");
         return;
     }
 });
+
 
 port=4000
 server.listen(port, ()=> {
