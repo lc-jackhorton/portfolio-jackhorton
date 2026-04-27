@@ -227,7 +227,13 @@
                 <hr>
                 <h2 id="contacts">Contacts</h2>
                     <ul>
-                        <a href="mailto:lc23-0765@lclark.edu" class="bottom_link">My Email</a>
+                        <form action="/message" method="POST">
+                            <input type="text" name="name" placeholder="Name" required><br>
+                            <input type="email" name="email" placeholder="Email" required><br>
+                            <textarea name="message" placeholder="Message" required></textarea><br>
+                            <button type="submit">Send</button>
+                        </form><br>
+                        <a href="https://mail.google.com/mail/?view=cm&to=lc23-0765@lclark.edu" class="bottom_link">Email Link</a>
                         <a href="https://www.linkedin.com/in/jack-horton-a94a30346/" class="bottom_link">LinkedIn Link</a>
                     </ul>
                 <footer>Copyright © Jack Horton All Rights Reserved.</footer>
