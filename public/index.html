@@ -6,6 +6,7 @@
         <title>Jack Horton's Portolio</title>
         <link rel="stylesheet" href="./styles.css">
         <script src="carousel.js" defer></script>
+        <script src="darkmode.js" defer></script>
     </head>
     <body>
         <div class="page_structure">
@@ -24,18 +25,20 @@
                         <p class="firstdescription">Math Major at Lewis <br>and Clark College</p><br>
                         <p class="firstdescription"> Navigation: <br>
                             <a href="#projects_title" class="link">Projects</a> <br>
+                            <a href="#electrical_diagram_title" class="link">Electrical Diagrams</a> <br>
                             <a href="#contacts" class="link">Contacts</a> <br>
+                            <div id="darkmodetoggle">Toggle Dark Mode</div>
                         </p>
                     </div>
                 </div>
                 <hr>
                 <table class="tableborder">
                     <tr class="tableborder">
-                        <th class="tableborder" style="background-color: #6fa8dc;">Interests</th>
-                        <th class="tableborder" style="background-color: #93c47d;">Skills</th>
+                        <th class="tableborder" id="interest_title">Interests</th>
+                        <th class="tableborder" id="skills_title">Skills</th>
                     </tr>
                     <tr class="tableborder">
-                        <td id="tablepadding" class="tableborder" style="background-color: #cfe2f3;">
+                        <td id="tablepadding" class="tableborder interests_column">
                             <li><p class="bold">Math Related</p>
                                 <ul>
                                     <li>Differential and statistical analysis of political and economic trends for game sims</li>
@@ -93,7 +96,7 @@
                                 </ul>
                             </li>
                         </td>
-                        <td id="tablepadding" class="tableborder" style="background-color: #d9ead3;">
+                        <td id="tablepadding" class="tableborder skill_column">
                             <li><p class="bold">Lab Skills</p>
                                 <ul>
                                     <li>Soldering</li>
