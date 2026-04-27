@@ -59,6 +59,46 @@ const server = http.createServer((req, res) => {
             res.end();
         })
     }
+    else if (req.url === "/current.png") {
+        filepath = path.join(__dirname, "public", "current.png");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "image/png"});
+            res.write(data);
+            res.end();
+        })
+    }
+    else if (req.url === "/lccircuit.png") {
+        filepath = path.join(__dirname, "public", "lccircuit.png");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "image/png"});
+            res.write(data);
+            res.end();
+        })
+    }
+    else if (req.url === "/solenoid.png") {
+        filepath = path.join(__dirname, "public", "solenoid.png");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "image/png"});
+            res.write(data);
+            res.end();
+        })
+    }
+    else if (req.url === "/carousel.js") {
+        filepath = path.join(__dirname, "public", "carousel.js");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "application/javascript"});
+            res.write(data);
+            res.end();
+        })
+    }
+    else if (req.url === "/darkmode.js") {
+        filepath = path.join(__dirname, "public", "darkmode.js");
+        fs.readFile(filepath, (err, data)=> {
+            res.writeHead( 200, {"Content-Type": "application/javascript"});
+            res.write(data);
+            res.end();
+        })
+    }
         else {
         res.writeHead(404);
         res.end("Not found");
