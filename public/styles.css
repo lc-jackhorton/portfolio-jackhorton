@@ -1,3 +1,66 @@
+/*-----------*/
+/* Dark Mode */
+/*-----------*/
+
+html.dark_mode {
+  background-color: black;
+  color: white;
+}
+
+html.dark_mode .middle_body {
+  padding: 20px;
+  background-color: black;
+}
+
+html.dark_mode .title {
+  background-color: #375D8F;
+  padding: 35px 0;
+}
+
+html.dark_mode h1 {
+  text-align: center;
+  color: #D9E8F5;
+  font-size: 40px;
+}
+
+html.dark_mode .tableborder {
+  border-collapse: collapse;
+  border: 2px solid white;
+}
+
+html.dark_mode .previousbutton,
+html.dark_mode .nextbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  border: none;
+  z-index: 10;
+}
+
+#darkmodetoggle {
+  cursor: pointer;
+}
+
+html.dark_mode #interest_title {
+  background-color: #2f5f8f;
+}
+
+html.dark_mode #skills_title {
+  background-color: #3f6f3a;
+}
+
+html.dark_mode .interests_column {
+  background-color: #5a7b9c;
+}
+
+html.dark_mode .skill_column {
+  background-color: #687e66;
+}
+
 /*-------------------*/
 /* Overall Structure */
 /*-------------------*/
@@ -104,6 +167,22 @@ th {
 
 h3 {
   text-align: center;
+}
+
+#interest_title {
+  background-color: #6fa8dc;
+}
+
+#skills_title {
+  background-color: #93c47d;
+}
+
+.interests_column {
+  background-color: #cfe2f3;
+}
+
+.skill_column {
+  background-color: #d9ead3;
 }
 
 /*-------------------*/
